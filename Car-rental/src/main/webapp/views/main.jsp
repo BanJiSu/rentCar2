@@ -46,7 +46,7 @@
 	
 	<nav>
 		<input type="button" class="ListBtn" id="rental" value="렌트">
-		<input type="button" class="ListBtn" id="community" value="커뮤니티">
+		<input type="button" class="ListBtn" id="community" value="게시판">
 		<input type="button" class="ListBtn" id="login" value="로그인">
 	</nav>
 

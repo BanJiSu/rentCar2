@@ -14,6 +14,9 @@ import controller.action.MainAction;
 import controller.action.RentalAction;
 import controller.action.RentalFormAction;
 import controller.action.S_SortRentFormAction;
+import controller.action.boardUpdateAction;
+import controller.action.boardViewFormAction;
+
 
 // Factory Method(»ý¼º)
 public class ActionFactory {
@@ -68,8 +71,15 @@ public class ActionFactory {
 		else if(command.equals("L_SortRent")) {
 			action = new L_SortRentFormAction();
 		}
-		// ....
+		else if(command.equals("boardView")) {
+			action = new boardViewFormAction();
+		}
+		else if(command.equals("boardUpdate")) {
+			action = new boardUpdateAction();
+		}
 		
+		// ....
+
 		return action;
 	}
 }
