@@ -15,7 +15,13 @@ import controller.action.RentalAction;
 import controller.action.RentalFormAction;
 import controller.action.S_SortRentFormAction;
 import controller.action.boardUpdateAction;
+import controller.action.boardUpdateFormAction;
 import controller.action.boardViewFormAction;
+import controller.action.boardWriteAction;
+import controller.action.boardWriteFormAction;
+import controller.action.carAllListAction;
+import controller.action.carCategoryListAction;
+import controller.action.carReserveInfoAction;
 
 
 // Factory Method(»ý¼º)
@@ -77,9 +83,28 @@ public class ActionFactory {
 		else if(command.equals("boardUpdate")) {
 			action = new boardUpdateAction();
 		}
+		else if(command.equals("boardUpdateForm")) {
+			action = new boardUpdateFormAction();
+		}
+		else if(command.equals("boardWriteForm")) {
+			action = new boardWriteFormAction();
+		}
+		else if(command.equals("boardWrite")) {
+			action = new boardWriteAction();
+		}
+		else if(command.equals("carCategoryList")) {
+			action = new carCategoryListAction();
+		}
+		else if(command.equals("carAllList")) {
+			action = new carAllListAction();
+		}
+		else if(command.equals("carReserveInfo")) {
+			action = new carReserveInfoAction();
+		}
+		
+		
 		
 		// ....
-
 		return action;
 	}
 }

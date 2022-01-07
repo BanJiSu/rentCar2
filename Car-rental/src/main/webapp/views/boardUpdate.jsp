@@ -51,6 +51,7 @@
 	%>
         
 		<form method="post" action="" name="myForm">
+		<input type="hidden" name="command" value="">
         <table border="solid 1px" style="border-collapse: collapse;">
             <tr>  
                 <td>글번호</td>
@@ -76,6 +77,7 @@
     <script>
     	function checkUp() {
 			f = document.myForm;
+			c = document.command;
 			
 			str = f.title2.value;
 			str = str.trim();
@@ -99,7 +101,9 @@
 				f.pw2.focus();
 				return;
 			}
-			f.action = "_14_boardUpdatePro.jsp?idx=<%=no %>";
+			f.action = "service";
+			//f.command.val("boardUpdateForm");
+			c.val = "boardUpdateForm";
 			f.submit();
 		}
     	
@@ -120,7 +124,7 @@
 				f.pw2.focus();
 				return;
 			}
-			f.action = "_15_boardDeletePro.jsp?idx=<%=no %>";
+			f.action = "";
 			f.submit();
 		}
     	function back() {

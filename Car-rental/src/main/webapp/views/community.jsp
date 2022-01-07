@@ -114,7 +114,7 @@
 		location.href='service?command=loginForm';
 	}
 	function addBoard(){
-		location.href='_10_boardWrite.jsp';
+		location.href='service?command=boardWriteForm';
 	}
 	
 	</script>

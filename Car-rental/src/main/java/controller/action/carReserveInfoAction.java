@@ -6,7 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class boardViewFormAction implements Action{
+public class carReserveInfoAction implements Action{
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -14,8 +14,10 @@ public class boardViewFormAction implements Action{
 		
 		
 		
-		String url = "views/boardView.jsp";
+		String url = "views/carReserveInfo.jsp";
 		request.getRequestDispatcher(url).forward(request, response);
 	}
+
+
 
 }

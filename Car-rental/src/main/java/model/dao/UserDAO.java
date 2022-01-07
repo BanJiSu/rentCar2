@@ -34,7 +34,7 @@ public class UserDAO {
 		try {
 			conn = DBManager.getConnection();			
 			
-			String str = "select * from rental.user";	
+			String str = "select * from user";	
 			pstmt = conn.prepareStatement(str);	
 			rs = pstmt.executeQuery();		
 			
@@ -61,7 +61,7 @@ public class UserDAO {
 			UserDTO newUser = new UserDTO(user.getId(), user.getPw());
 			
 			conn = DBManager.getConnection();
-			String str = "insert into rental values(?, ?, ?)";
+			String str = "insert into user values(?, ?, ?)";
 			pstmt = conn.prepareStatement(str);
 			
 			pstmt.setString(1, newUser.getId());

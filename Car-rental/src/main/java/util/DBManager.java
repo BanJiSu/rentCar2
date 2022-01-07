@@ -17,10 +17,10 @@ public class DBManager {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			// jdbc:mysql://localhost:3306/데이터베이스스키마명?serverTimezone=UTC
-			String url = "jdbc:mysql://rentcar.cpdz8jedc8fx.us-east-1.rds.amazonaws.com/rental?serverTimeZone=UTC";	// 데이터베이스 주소
+			String url = "jdbc:mysql://car-rental.ckbzfmlusrii.ap-northeast-2.rds.amazonaws.com/Carrental?serverTimeZone=UTC";	// 데이터베이스 주소
 			
 			String id = "admin";
-			String pw = "SkRxYpBjU98rGzvc"; 
+			String pw = "tj7VWyb268X9w9Vw"; 
 			
 			conn = DriverManager.getConnection(url, id, pw);
 			

@@ -25,7 +25,8 @@
 </head>
 <body>
 	<h1>WRITE PAGE</h1>
-	<form method="post" action="boardWriteAction">
+	<form method="get" action="service">
+	<input type="hidden" name="command" value="boardWrite">
         <table border="solid 1px" style="border-collapse: collapse;">
             <tr>  
                 <td>제목</td>
@@ -34,8 +35,8 @@
             </tr>
             <tr>
                 <td><input type="text" name="title"></td>
-                <td><input name="id" value=<%=session.getAttribute("log")%>></td>
-                <td><input name="pw" type="password" value=<%=session.getAttribute("logPw")%> class="pw"></td>
+                <td><input name="id" value=""></td>
+                <td><input name="pw" type="password" value="" class="pw"></td>
             </tr>
             
         </table>
@@ -47,7 +48,7 @@
     
     <script>
     	function back() {
-    		location.href='_07_boardList.jsp';
+    		location.href='service?command=communityForm';
 		}
     </script>
 </body>
